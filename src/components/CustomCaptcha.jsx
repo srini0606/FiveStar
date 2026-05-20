@@ -67,12 +67,18 @@ const CustomCaptcha = forwardRef(({ onValidate }, ref) => {
 
   return (
     <div className="relative">
-      <label className="block text-sm font-medium text-gray-700">CAPTCHA</label>
+      <label htmlFor="captchaInput" className="block text-sm font-medium text-gray-700">CAPTCHA</label>
       <div className="flex items-center gap-2">
-        <canvas ref={canvasRef} className="border rounded" />
+        <canvas
+          ref={canvasRef}
+          role="img"
+          aria-label="Visual CAPTCHA challenge"
+          className="border rounded"
+        />
         <button
           type="button"
           onClick={regenerateCaptcha}
+          aria-label="Refresh CAPTCHA code"
           className="text-xs px-2 py-1 border rounded bg-gray-100 hover:bg-gray-200"
         >
           Refresh
@@ -80,6 +86,7 @@ const CustomCaptcha = forwardRef(({ onValidate }, ref) => {
       </div>
       <input
         type="text"
+        id="captchaInput"
         value={userInput}
         onChange={(e) => setUserInput(e.target.value.toUpperCase())}
         className="mt-2 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none border-gray-300"

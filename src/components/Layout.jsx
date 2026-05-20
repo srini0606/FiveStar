@@ -24,6 +24,7 @@ const Layout = ({ children }) => {
       {/* Background layer */}
       <div
         className="absolute inset-0 z-0"
+        aria-hidden="true"
         style={{
           backgroundImage: `url(${backgroundImage})`,
           backgroundSize: 'cover',

@@ -154,13 +154,13 @@ function TicketFormScreen() {
           hideProgressBar
         />
         <div className="mb-6">
-          <img src={logoImage} alt="Company Logo" className="mx-auto h-12 w-auto" />
+          <img src={logoImage} alt="Five Star Company Logo" className="mx-auto h-12 w-auto" />
         </div>
         {isSubmitted ? (
           <div className=' w-[600px]'>
             <div className='text-center'>
               <div className='flex items-center justify-center py-4'>
-                <CheckCircleIcon className='w-20 h-20 text-lime-500' />
+                <CheckCircleIcon className='w-20 h-20 text-lime-500' aria-hidden="true" />
               </div>
               <span className='text-zinc-800 font-medium text-xl py-4'>Successfully Submitted</span>
               <div className='text-zinc-800 font-medium text-xl py-4'>
@@ -302,11 +302,12 @@ function TicketFormScreen() {
                   <input
                     type="text"
                     readOnly
+                    aria-label="Selected file name"
                     className={`mr-4 block w-full px-3 py-2  border border-gray-300 rounded-md shadow-sm focus:outline-none sm:text-sm ${errors.attachment ? "border-red-500" : "border-gray-300"}`}
                     placeholder={fileName || "Choose a file"}
                   />
-                  <label htmlFor="attachment" className="cursor-pointer bg-gray-100 rounded-md p-2 text-gray-500 inline-block">
-                    <PaperClipIcon className="w-5 h-5" />
+                  <label htmlFor="attachment" className="cursor-pointer bg-gray-100 rounded-md p-2 text-gray-500 inline-block" aria-label="Choose file to attach">
+                    <PaperClipIcon className="w-5 h-5" aria-hidden="true" />
                   </label>
                 </div>
                 {errors.attachment && <span className="text-red-500 text-xs">File is required</span>}

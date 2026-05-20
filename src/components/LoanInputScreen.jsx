@@ -171,7 +171,7 @@ function LoanInputScreen() {
       />
       <div className="w-full max-w-md bg-white rounded-lg shadow-lg p-8">
         <div className="mb-6">
-          <img src={logoImage} alt="Company Logo" className="mx-auto h-12 w-auto" />
+          <img src={logoImage} alt="Five Star Company Logo" className="mx-auto h-12 w-auto" />
         </div>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
           {(inputType === "" || inputType === 'loan') && (
@@ -201,9 +201,10 @@ function LoanInputScreen() {
                 <button
                   type="button"
                   onClick={() => clearInput('loanNumber')}
+                  aria-label="Clear Loan Number"
                   className="absolute right-2 top-8 text-gray-400 hover:text-gray-600"
                 >
-                  <XMarkIcon className='h-5 w-5 text-red-500' />
+                  <XMarkIcon className='h-5 w-5 text-red-500' aria-hidden="true" />
                 </button>
               )}
             </div>
@@ -241,9 +242,10 @@ function LoanInputScreen() {
                 <button
                   type="button"
                   onClick={() => clearInput('mobileNumber')}
+                  aria-label="Clear Mobile Number"
                   className="absolute right-2 top-8 text-gray-400 hover:text-gray-600"
                 >
-                  <XMarkIcon className='w-5 h-5 text-red-500' />
+                  <XMarkIcon className='w-5 h-5 text-red-500' aria-hidden="true" />
                 </button>
               )}
             </div>

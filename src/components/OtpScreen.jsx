@@ -109,7 +109,7 @@ function OtpScreen() {
           hideProgressBar
         />
         <div className="mb-6">
-          <img src={logoImage} alt="Company Logo" className="mx-auto h-12 w-auto" />
+          <img src={logoImage} alt="Five Star Company Logo" className="mx-auto h-12 w-auto" />
         </div>
         <h2 className="text-lg font-semibold text-center text-gray-700 py-4">Verify Your Identity</h2>
         <div className="space-y-3 mb-5">
